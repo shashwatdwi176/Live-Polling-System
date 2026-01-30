@@ -1,48 +1,5 @@
 # Live Polling System
 
-A production-grade, real-time polling system built for a technical hiring assignment. Features server-authoritative design, refresh resilience, and full database persistence.
-
-## 🚀 Deployment (Strict Mode)
-
-### Prerequisites
-- A GitHub repository containing this code.
-- A **Hosted PostgreSQL Database** (Neon, Railway, Supabase, or Render's internal DB).
-- `DATABASE_URL` connection string.
-
-### Option 1: Render.com (Recommended)
-This project includes a `render.yaml` for one-click deployment.
-
-1. Create a new **Blueprint Instance** on Render.
-2. Connect your GitHub repository.
-3. Render will detect `render.yaml` and provision:
-   - PostgreSQL Database
-   - Backend Service
-   - Frontend Service
-4. **Manual Step**: You MUST run migrations after deployment.
-   - Go to Backend Shell in Render Dashboard
-   - Run: `npm run migrate`
-
-### Option 2: Manual Deployment
-
-**Backend (Railway/Heroku/Render)**
-1. Set Environment Variables:
-   - `NODE_ENV=production`
-   - `DATABASE_URL=postgres://user:pass@host:5432/db?sslmode=require`
-   - `CORS_ORIGIN=https://your-frontend.vercel.app`
-2. Build & Start:
-   ```bash
-   cd backend
-   npm install
-   npm run build
-   npm run start
-   ```
-
-**Frontend (Vercel/Netlify)**
-1. Set Environment Variables:
-   - `VITE_API_URL=https://your-backend.onrender.com`
-   - `VITE_WS_URL=https://your-backend.onrender.com`
-2. Build Command: `cd frontend && npm install && npm run build`
-3. Output Directory: `frontend/dist`
 
 ## 🎯 Key Features
 
