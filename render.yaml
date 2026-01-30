@@ -8,8 +8,6 @@ services:
     buildCommand: npm install && npm run build
     startCommand: npm start
     envVars:
-      - key: NODE_ENV
-        value: production
       - key: CORS_ORIGIN
         value: "*" # Allow all for initial deploy to avoid circular dependency
       - key: DATABASE_URL
