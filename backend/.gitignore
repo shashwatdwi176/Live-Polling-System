@@ -1,0 +1,27 @@
+# Dependencies
+node_modules
+
+# Build
+dist
+build
+
+# Environment variables
+.env
+.env.*
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Testing
+coverage
+.nyc_output
+
+# IDE / System
+.DS_Store
+.idea
+.vscode
+*.sqlite
+*.db
